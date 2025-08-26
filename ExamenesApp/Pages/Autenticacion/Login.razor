@@ -1,0 +1,71 @@
+﻿@page "/login"
+@using ExamenesApp_Modelos.ViewModels
+@using ExamenesApp_Modelos.DTOs
+@inject NavigationManager NavigationManager
+@inject AutenticacionService authService
+@inject ExamenesApp.Servicios.PerfilService perfilService
+<PageTitle>Login</PageTitle>
+<h3>Login</h3>
+<div class="card">
+    <div class="card-body">
+        @if (!string.IsNullOrEmpty(mensaje))
+        {
+            <div class="alert alert-danger">@mensaje</div>
+        }
+        <EditForm OnValidSubmit="LoginUser" FormName="form" Model="Input">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <InputText @bind-Value="Input.Email" class="form-control" />
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <InputText @bind-Value="Input.Password" class="form-control" type="password" />
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="registro" class="btn btn-success">Registrate</a>
+        </EditForm>
+
+    </div>
+</div>
+
+
+
+@code {
+    private UsuarioDTO UsuarioDTO { get; set; } = new UsuarioDTO();
+    private LoginUsuarioViewModel Input { get; set; } = new LoginUsuarioViewModel();
+    private string? mensaje;
+
+    private async Task LoginUser()
+    {
+        mensaje = null; 
+
+        var intentoLogin = await authService.Login(Input);
+
+        if (intentoLogin.Token is null)
+        {
+            mensaje = intentoLogin.Mensaje;
+            return; 
+        }
+
+        // Login exitoso, ahora obtenemos el perfil
+        var datos = await perfilService.GetPerfilAsync();
+
+        if (datos != null && !string.IsNullOrEmpty(datos.Nombres))
+        {
+            NavigationManager.NavigateTo("/inicio");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/registro-datos");
+        }
+    }
+
+
+}
+

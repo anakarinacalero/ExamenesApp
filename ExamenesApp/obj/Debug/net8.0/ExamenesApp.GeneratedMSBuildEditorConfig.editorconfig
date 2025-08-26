@@ -1,0 +1,73 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = ExamenesApp
+build_property.RootNamespace = ExamenesApp
+build_property.ProjectDir = C:\Users\anaka\repos\ExamenesApp\ExamenesApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\anaka\repos\ExamenesApp\ExamenesApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Autenticacion/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZW50aWNhY2lvblxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Autenticacion/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZW50aWNhY2lvblxSZWRpcmVjdFRvTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Autenticacion/Registro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZW50aWNhY2lvblxSZWdpc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Inicio.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/InscribirExamen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpYmlyRXhhbWVuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Listado.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFkby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/RegistroDatos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9EYXRvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-m8wv3y2nxp
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bdghauoqyx

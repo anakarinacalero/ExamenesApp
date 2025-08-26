@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "svHdN5IHdJA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp_Modelos\\ExamenesApp_Modelos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anaka\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.19\\microsoft.aspnetcore.authorization.8.0.19.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.19\\microsoft.aspnetcore.components.8.0.19.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.19\\microsoft.aspnetcore.components.analyzers.8.0.19.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\8.0.19\\microsoft.aspnetcore.components.authorization.8.0.19.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.19\\microsoft.aspnetcore.metadata.8.0.19.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.3\\microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\anaka\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

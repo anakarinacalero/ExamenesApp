@@ -1,0 +1,67 @@
+﻿@page "/registro"
+@using ExamenesApp_Modelos.ViewModels
+@inject AutenticacionService authService
+@inject NavigationManager navigationManager
+<PageTitle>Registro</PageTitle>
+
+<h1>Regístrate</h1>
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div class="alert alert-danger">@mensaje</div>
+}
+<div class="card">
+    <div class="card-body">
+        <EditForm Model="InputRegistro" OnValidSubmit="Registrar" FormName="formId">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label>Email</label>
+                <InputText @bind-Value="InputRegistro.Email" class="form-control" />
+                <ValidationMessage For="() => InputRegistro.Email" />
+            </div>
+
+            <div class="mb-3">
+                <label>Contraseña</label>
+                <InputText @bind-Value="InputRegistro.Password" type="password" class="form-control" />
+                <ValidationMessage For="() => InputRegistro.Password" />
+            </div>
+
+            <div class="mb-3">
+                <label>Confirmar contraseña</label>
+                <InputText @bind-Value="InputRegistro.ConfirmPassword" type="password" class="form-control" />
+                <ValidationMessage For="() => InputRegistro.ConfirmPassword" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <a class="btn btn-link" href="/Account/Login">Ya tengo cuenta</a>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private RegistroUsuarioViewModel InputRegistro = new RegistroUsuarioViewModel();
+    string mensaje = string.Empty;
+    private async Task Registrar()
+    {
+
+        var resultado = await authService.Registro(InputRegistro);
+
+        if (resultado.Exitoso)
+        {
+            navigationManager.NavigateTo("/");
+        }
+        else
+        {
+            if (resultado.Mensaje == "El usuario ya existe")
+            {
+                mensaje = "Ya existe una cuenta con este correo. Registrate con otro email.";
+            }
+            else
+            {
+                mensaje = resultado.Mensaje;
+            }
+        }
+    }
+}

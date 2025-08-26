@@ -1,0 +1,108 @@
+﻿@page "/listado"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
+@using ExamenesApp.Modelos
+@using ExamenesApp.Servicios
+@using ExamenesApp_Modelos.DTOs
+@inject InscripcionExamenService servicioInscripcionExamenes
+
+@if (isLoading)
+{
+    <p>Cargando exámenes...</p>
+}
+else if (!ExamenesInscripciones.Any())
+{
+    <div class="alert alert-warning">
+        No tienes registro de exámenes. <a href="/inscribir-examenes" class="alert-link">Haz clic aquí para inscribirte a un exámen</a>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="row text-center">
+            <h1 class="mb-4">Listado de exámenes</h1>
+
+            <h3>Exámenes por presentar</h3>
+            @foreach (var examen in ExamenesPorPresentar)
+            {
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="grid-card">
+                        <p>@nombreCompleto</p>
+                        <h3>@examen.NombreExamen</h3>
+                        <p>Código: @examen.Codigo</p>
+                        <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
+                        <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
+                        <p>
+                            <button class="btn btn-link p-0" @onclick="() => OnDelete(examen.Id)">Eliminar</button>
+                        </p>
+                    </div>
+                </div>
+            }
+
+            <h3>Exámenes presentados</h3>
+            @foreach (var examen in ExamenesPresentados)
+            {
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="grid-card">
+                        <p>@nombreCompleto</p>
+                        <h3>@examen.NombreExamen</h3>
+                        <p>Código: @examen.Codigo</p>
+                        <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
+                        <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
+                        <p><span class="badge bg-success">Presentado</span></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    private string nombreCompleto;
+    private UsuarioDTO UsuarioDTO { get; set; } = new UsuarioDTO();
+    private List<InscripcionExamenDTO> ExamenesInscripciones = new();
+    private List<InscripcionExamenDTO> ExamenesPorPresentar = new();
+    private List<InscripcionExamenDTO> ExamenesPresentados = new();
+    private bool isLoading = true;
+    private string mensaje;
+    protected async override Task OnInitializedAsync()
+    {
+        ExamenesInscripciones = await servicioInscripcionExamenes.ObtenerInscripcionesAsync();
+
+        // Separar las listas
+        ExamenesPorPresentar = ExamenesInscripciones
+            .Where(e => e.FechaExamen >= DateTime.Today)
+            .ToList();
+
+        ExamenesPresentados = ExamenesInscripciones
+            .Where(e => e.FechaExamen < DateTime.Today)
+            .ToList();
+
+        
+
+        isLoading = false;
+    }
+
+    private async Task OnDelete(int id)
+    {
+        var eliminado = await servicioInscripcionExamenes.EliminarInscripcion(id);
+        if (eliminado)
+        {
+            ExamenesInscripciones.RemoveAll(x => x.Id == id);
+            ExamenesPorPresentar = ExamenesInscripciones
+           .Where(e => e.FechaExamen >= DateTime.Today)
+           .ToList();
+
+            ExamenesPresentados = ExamenesInscripciones
+                .Where(e => e.FechaExamen < DateTime.Today)
+                .ToList();
+            StateHasChanged(); // Actualiza la interfaz
+        }
+        else
+        {
+            // Mostrar mensaje de error al usuario
+            mensaje = "No se encontró la inscripción a eliminar.";
+        }
+    }
+
+}

@@ -1,0 +1,129 @@
+﻿@page "/inicio"
+@using ExamenesApp_Modelos.DTOs
+@using ExamenesApp.Servicios
+@using Microsoft.AspNetCore.Authorization
+@using System.Globalization;
+@using Microsoft.AspNetCore.Components.Authorization
+@attribute [Authorize]
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager Navigation
+@inject PerfilService servicioPerfil
+@inject AutenticacionService servicioUsuario
+
+<PageTitle>Inicio</PageTitle>
+
+@if (isloading)
+{
+    <p>Cargando...</p>
+}
+else if (String.IsNullOrEmpty(UsuarioDTO.Nombres))
+{
+    <div class="alert alert-warning">
+        Debes completar tu perfil antes de poder ver tu perfil.
+        <a href="/registro-datos" class="alert-link">Haz clic aquí para completar tu perfil.</a>
+    </div>
+}
+else
+{
+    <h1 class="mb-3">¡Hola @ConvertirAMayusculasPalabras(UsuarioDTO.Nombres)!</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="card-title mb-0">Información del Perfil</h4>
+                <NavLink href="registro-datos" class="btn btn-primary">Editar perfil</NavLink>
+            </div>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Nombres</th>
+                        <td>@ConvertirAMayusculasPalabras(UsuarioDTO.Nombres)</td>
+                    </tr>
+                    <tr>
+                        <th>Apellidos</th>
+                        <td>@ConvertirAMayusculasPalabras(UsuarioDTO.Apellidos)</td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de nacimiento</th>
+                        <td>@UsuarioDTO.FechaDeNacimiento.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                    <tr>
+                        <th>Dirección</th>
+                        <td>@PrimeraLetraMayuscula(UsuarioDTO.Direccion)</td>
+                    </tr>
+                    <tr>
+                        <th>Género</th>
+                        <td>@UsuarioDTO.Genero</td>
+                    </tr>
+                    <tr>
+                        <th>CURP</th>
+                        <td>@UsuarioDTO.CURP</td>
+                    </tr>
+                    <tr>
+                        <th>Teléfono</th>
+                        <td>@UsuarioDTO.Telefono</td>
+                    </tr>
+                    <tr>
+                        <th>Modalidad</th>
+                        <td>@(UsuarioDTO.Modalidad == "morning" ? "Mañana" : UsuarioDTO.Modalidad)</td>
+                    </tr>
+                    <tr>
+                        <th>Descripción personal</th>
+                        <td>@UsuarioDTO.DescripcionPersonal</td>
+                    </tr>
+                    <tr>
+                        <th>Horario de preferencia</th>
+                        <td>@UsuarioDTO.HorarioPreferencia</td>
+                    </tr>
+                    <tr>
+                        <th>Desea tomar varios exámenes</th>
+                        <td>@(UsuarioDTO.VariosExamenes ? "Sí" : "No")</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+
+
+@code{
+    private string name = "";
+    private UsuarioDTO UsuarioDTO { get; set; } = new UsuarioDTO();
+    private string mensaje = string.Empty;
+    private bool isloading = true;
+    protected override async Task OnInitializedAsync()
+    {
+
+
+        var datos = await servicioPerfil.GetPerfilAsync();
+        if (datos != null)
+        {
+            UsuarioDTO = datos;
+        }
+        isloading = false;
+
+    }
+
+    private string ConvertirAMayusculasPalabras(string texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
+            return texto;
+
+        // Crea un TextInfo para la cultura actual
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+
+        // Convierte a title case
+        return textInfo.ToTitleCase(texto.ToLower());
+    }
+    public static string PrimeraLetraMayuscula(string texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
+            return texto;
+
+        return char.ToUpper(texto[0]) + texto.Substring(1);
+    }
+
+
+
+}
+

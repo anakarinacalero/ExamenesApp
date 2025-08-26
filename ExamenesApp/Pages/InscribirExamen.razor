@@ -1,0 +1,95 @@
+﻿@page "/inscribir-examenes"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
+@using ExamenesApp_Modelos.DTOs
+@using ExamenesApp.Servicios
+@inject InscripcionExamenService servicioInscripcionExamen
+@inject PerfilService perfilService
+@if (isLoading)
+{
+    <p>Cargando exámenes...</p>
+}
+else if (String.IsNullOrEmpty(@nombreUsuario))
+{
+    <div class="alert alert-warning">
+        Debes completar tu perfil antes de inscribirte a un examen. <a href="/registro-datos" class="alert-link">Haz clic aquí para completar tu perfil.</a>
+    </div>
+    return;
+}
+else
+{
+    <h3>Inscripción a Examen</h3>
+
+    <EditForm Model="@modelo" OnValidSubmit="RegistrarExamen">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-4">
+            <label class="form-label">Seleccione el examen</label>
+            <InputSelect @bind-Value="modelo.ExamenId" class="form-control">
+                <option value="" disabled selected>--Seleccionar exámen--</option>
+                <option value="1">Ingeniería en Sistemas</option>
+                <option value="2">Biología</option>
+                <option value="3">Derecho</option>
+                <option value="4">Comercio</option>
+                <option value="5">Educación</option>
+                <option value="6">Psicología</option>
+                <option value="7">Matemáticas</option>
+                <option value="8">Química</option>
+                <option value="9">Economía</option>
+                <option value="10">Administración</option>
+                <option value="11">Mercadotecnia</option>
+            </InputSelect>
+
+        </div>
+        
+
+
+
+        <button type="submit" class="btn btn-primary">Inscribirse</button>
+    </EditForm>
+    
+}
+@if (mensaje != null)
+{
+    <div class="alert alert-success mt-3">@mensaje</div>
+}
+
+@code {
+    private InscripcionExamenDTO modelo = new();
+    private string mensaje;
+    private string codigo;
+    private string nombreUsuario="";
+
+    private bool isLoading = true;
+    protected async override Task OnInitializedAsync()
+    {
+        var usuarioConRegistro = await perfilService.GetPerfilAsync();
+        if (usuarioConRegistro is null)
+        {
+            nombreUsuario = null;
+        }
+        else
+        {
+            nombreUsuario = usuarioConRegistro.Nombres;
+        }
+        isLoading = false;
+    }
+
+    private async Task RegistrarExamen()
+    {
+
+        var inscripcionExamen = await servicioInscripcionExamen.RegistrarInscripcion(modelo.ExamenId);
+
+        if (inscripcionExamen is null)
+        {
+            mensaje = "Ya está inscrito en este examen.";
+            modelo = new InscripcionExamenDTO();
+            return;
+        }
+        mensaje = $"Examen registrado con éxito. Fecha: {inscripcionExamen.FechaExamen:dd 'de' MMMM 'de' yyyy HH:mm}. Código: {inscripcionExamen.Codigo}";
+        modelo = new InscripcionExamenDTO();
+    }
+}
+
+

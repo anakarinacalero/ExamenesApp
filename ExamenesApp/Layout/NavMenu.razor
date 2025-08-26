@@ -1,0 +1,86 @@
+﻿@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Authorization
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ExamenesApp</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <AuthorizeView>
+            <NotAuthorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="registro" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Registrate
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="login">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Accede a tu cuenta
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="inicio">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>Inicio
+                    </NavLink>
+
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="registro-datos">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>Registro de datos
+                    </NavLink>
+
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="inscribir-examenes">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>Inscribir exámenes
+                    </NavLink>
+
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="listado">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>Listado de exámenes
+                    </NavLink>
+
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="#" @onclick="Logout">
+                        <span class="bi bi-door-closed me-2"></span> Cerrar sesión
+                    </NavLink>
+                </div>
+
+
+            </Authorized>
+        </AuthorizeView>
+    </nav>
+</div>
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    [Inject] private IJSRuntime Js { get; set; }
+    [Inject] private AuthenticationStateProvider AuthStateProvider { get; set; }
+    
+
+    private async Task Logout()
+    {
+        // Quitar token del localStorage
+        await Js.InvokeVoidAsync("localStorage.removeItem", "authToken");
+
+        // Notificar al CustomAuthenticationStateProvider
+        ((CustomAuthenticationStateProvider)AuthStateProvider).NotifyUserLogout();
+
+        // Redirigir a la página de login o home
+        NavigationManager.NavigateTo("/login");
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

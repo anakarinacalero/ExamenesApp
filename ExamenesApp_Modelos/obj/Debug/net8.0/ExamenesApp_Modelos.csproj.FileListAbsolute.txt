@@ -1,0 +1,12 @@
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\bin\Debug\net8.0\ExamenesApp_Modelos.deps.json
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\bin\Debug\net8.0\ExamenesApp_Modelos.dll
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\bin\Debug\net8.0\ExamenesApp_Modelos.pdb
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.AssemblyInfoInputs.cache
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.AssemblyInfo.cs
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.csproj.CoreCompileInputs.cache
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.dll
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\refint\ExamenesApp_Modelos.dll
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.pdb
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ref\ExamenesApp_Modelos.dll
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp_Modelos\obj\Debug\net8.0\ExamenesApp_Modelos.csproj.AssemblyReference.cache
