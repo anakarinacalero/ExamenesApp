@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ExamenesApp",
   "resources": {
-    "hash": "sha256-FTDVUU/vBGcAkKWw8hgDn1XAc3eTJB4nmWUcUWhzhPM=",
+    "hash": "sha256-il3KsTDfwJ0wQdsSCQXVgla+R7hJ8WYPW+k6UYxxPGk=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -212,11 +212,11 @@
       "netstandard.wasm": "sha256-lAg5WvTiA8wbsIwlr51xh0YWpXT9F5EX3Cnv+11O/mU=",
       "System.Private.CoreLib.wasm": "sha256-3O3muuRQwoLRecYRjfIFWUURvTjP4EmD2O8wYg2UDNY=",
       "ExamenesApp_Modelos.wasm": "sha256-jUVANaaiRiuYTAV+ocgsJox7VrYi+m9g6yHZrxJ0110=",
-      "ExamenesApp.wasm": "sha256-DFhWtZqL362T0/tdBrWdOOS3xznc7+rf/a4oLqRpsh4="
+      "ExamenesApp.wasm": "sha256-3WE/cnEY3KR7p9ntF2gYGDRWBsGBdVpoQtwRIkgwaRk="
     },
     "pdb": {
       "ExamenesApp_Modelos.pdb": "sha256-13KvVSb3f6bdsiJ3GuJl4Yz6yYPFdG7pl8Dbp4GswNo=",
-      "ExamenesApp.pdb": "sha256-MQCqUPefK+QJ0A+5dkldgnJ+bOv6pE4QfAK/8JrkheQ="
+      "ExamenesApp.pdb": "sha256-evXHCjEvNEGpQZ33/xRqmiO3YOw6p6hGf5AkTuUMGHc="
     }
   },
   "cacheBootResources": true,

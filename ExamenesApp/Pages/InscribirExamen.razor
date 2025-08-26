@@ -5,6 +5,7 @@
 @using ExamenesApp.Servicios
 @inject InscripcionExamenService servicioInscripcionExamen
 @inject PerfilService perfilService
+@inject IJSRuntime JS
 @if (isLoading)
 {
     <p>Cargando exámenes...</p>
@@ -18,7 +19,12 @@ else if (String.IsNullOrEmpty(@nombreUsuario))
 }
 else
 {
-    <h3>Inscripción a Examen</h3>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">Inscripción a Examen</h3>
+        <a href="/inicio" class="btn btn-primary">
+            Ver lista de exámenes
+        </a>
+    </div>
 
     <EditForm Model="@modelo" OnValidSubmit="RegistrarExamen">
         <DataAnnotationsValidator />
@@ -42,24 +48,18 @@ else
             </InputSelect>
 
         </div>
-        
+
 
 
 
         <button type="submit" class="btn btn-primary">Inscribirse</button>
     </EditForm>
-    
-}
-@if (mensaje != null)
-{
-    <div class="alert alert-success mt-3">@mensaje</div>
+
 }
 
 @code {
     private InscripcionExamenDTO modelo = new();
-    private string mensaje;
-    private string codigo;
-    private string nombreUsuario="";
+    private string nombreUsuario = "";
 
     private bool isLoading = true;
     protected async override Task OnInitializedAsync()
@@ -80,14 +80,19 @@ else
     {
 
         var inscripcionExamen = await servicioInscripcionExamen.RegistrarInscripcion(modelo.ExamenId);
-
+      
         if (inscripcionExamen is null)
         {
-            mensaje = "Ya está inscrito en este examen.";
+            await JS.InvokeVoidAsync("toastrNotificaciones.error",
+            $"Ya está inscrito en este exámen", "Error");
+
+
             modelo = new InscripcionExamenDTO();
             return;
         }
-        mensaje = $"Examen registrado con éxito. Fecha: {inscripcionExamen.FechaExamen:dd 'de' MMMM 'de' yyyy HH:mm}. Código: {inscripcionExamen.Codigo}";
+        await JS.InvokeVoidAsync("toastrNotificaciones.success",
+        $"Exámen registrado con éxito. Fecha: {inscripcionExamen.FechaExamen:dd 'de' MMMM 'de' yyyy. Hora: HH:mm}.",
+        "Éxito");
         modelo = new InscripcionExamenDTO();
     }
 }

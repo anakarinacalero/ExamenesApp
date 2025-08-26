@@ -5,116 +5,118 @@
 @attribute [Authorize]
 @inject NavigationManager Navigation
 @inject PerfilService servicioPerfil
+@inject IJSRuntime JS
+
 <PageTitle>Inscripcion</PageTitle>
 
 @*@if (isLoading)
-{<p>Cargando exámenes...</p>}
-else
-{*@
+    {<p>Cargando exámenes...</p>}
+    else
+    {*@
 
-    <div class="text-center">
-        <h1 class="display-4">Registra tus datos</h1>
-    </div>
+<div class="text-center">
+    <h1 class="display-4">Registra tus datos</h1>
+</div>
 
-    <div class="card">
-        <div class="card-body">
-            <EditForm OnValidSubmit="OnSubmitPerfilUsuario" FormName="formId" Model="UsuarioDTO">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
-                <div class="mb-4">
-                    <label class="form-label">Nombres</label>
-                    <InputText @bind-Value="UsuarioDTO.Nombres" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.Nombres"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Apellidos</label>
-                    <InputText @bind-Value="UsuarioDTO.Apellidos" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.Apellidos"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Fecha de nacimiento</label>
-                    <InputDate @bind-Value="UsuarioDTO.FechaDeNacimiento" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.FechaDeNacimiento"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Dirección</label>
-                    <InputText @bind-Value="UsuarioDTO.Direccion" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.Direccion"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Género</label>
-                    <InputSelect @bind-Value="UsuarioDTO.Genero" class="form-control">
-                        <option value="" disabled selected>-- Selecciona un elemento --</option>
-                        <option value="@("femenino")">Femenino</option>
-                        <option value="@("masculino")">Masculino</option>
-                        <option value="@("otro")">Otro</option>
-                    </InputSelect>
-                    <ValidationMessage For="() => UsuarioDTO.Genero"></ValidationMessage>
-                </div>
+<div class="card">
+    <div class="card-body">
+        <EditForm OnValidSubmit="OnSubmitPerfilUsuario" FormName="formId" Model="UsuarioDTO">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="mb-4">
+                <label class="form-label">Nombres</label>
+                <InputText @bind-Value="UsuarioDTO.Nombres" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.Nombres"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Apellidos</label>
+                <InputText @bind-Value="UsuarioDTO.Apellidos" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.Apellidos"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Fecha de nacimiento</label>
+                <InputDate @bind-Value="UsuarioDTO.FechaDeNacimiento" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.FechaDeNacimiento"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Dirección</label>
+                <InputText @bind-Value="UsuarioDTO.Direccion" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.Direccion"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Género</label>
+                <InputSelect @bind-Value="UsuarioDTO.Genero" class="form-control">
+                    <option value="" disabled selected>-- Selecciona un elemento --</option>
+                    <option value="@("Femenino")">Femenino</option>
+                    <option value="@("Masculino")">Masculino</option>
+                    <option value="@("Otro")">Otro</option>
+                </InputSelect>
+                <ValidationMessage For="() => UsuarioDTO.Genero"></ValidationMessage>
+            </div>
 
-                <div class="mb-4">
-                    <label class="form-label">CURP</label>
-                    <InputText @bind-Value="UsuarioDTO.CURP" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.CURP"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Teléfono</label>
-                    <InputText @bind-Value="UsuarioDTO.Telefono" class="form-control" />
-                    <ValidationMessage For="() => UsuarioDTO.Telefono"></ValidationMessage>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Modalidad</label>
-                    <InputRadioGroup @bind-Value="UsuarioDTO.Modalidad">
-                        <div class="d-flex gap-4">
-                            <div class="form-check">
-                                <InputRadio class="form-check-input" value="@("Online")" id="modalidadOnline" />
-                                <label class="form-check-label" for="modalidadOnline">Online</label>
-                            </div>
-                            <div class="form-check">
-                                <InputRadio class="form-check-input" value="@("Presencial")" id="modalidadPresencial" />
-                                <label class="form-check-label" for="modalidadPresencial">Presencial</label>
-                            </div>
+            <div class="mb-4">
+                <label class="form-label">CURP</label>
+                <InputText @bind-Value="UsuarioDTO.CURP" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.CURP"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Teléfono</label>
+                <InputText @bind-Value="UsuarioDTO.Telefono" class="form-control" />
+                <ValidationMessage For="() => UsuarioDTO.Telefono"></ValidationMessage>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Modalidad</label>
+                <InputRadioGroup @bind-Value="UsuarioDTO.Modalidad">
+                    <div class="d-flex gap-4">
+                        <div class="form-check">
+                            <InputRadio class="form-check-input" value="@("Online")" id="modalidadOnline" />
+                            <label class="form-check-label" for="modalidadOnline">Online</label>
                         </div>
-                    </InputRadioGroup>
-                    <ValidationMessage For="() => UsuarioDTO.Modalidad"></ValidationMessage>
-                </div>
+                        <div class="form-check">
+                            <InputRadio class="form-check-input" value="@("Presencial")" id="modalidadPresencial" />
+                            <label class="form-check-label" for="modalidadPresencial">Presencial</label>
+                        </div>
+                    </div>
+                </InputRadioGroup>
+                <ValidationMessage For="() => UsuarioDTO.Modalidad"></ValidationMessage>
+            </div>
 
-                <div class="mb-4">
-                    <label class="form-label">Descripción personal</label>
-                    <InputTextArea @bind-Value="@UsuarioDTO.DescripcionPersonal" class="form-control" />
+            <div class="mb-4">
+                <label class="form-label">Descripción personal</label>
+                <InputTextArea @bind-Value="@UsuarioDTO.DescripcionPersonal" class="form-control" />
 
-                </div>
+            </div>
 
-                <div class="mb-4">
-                    <label class="form-label">Horario de preferencia</label>
-                    <InputSelect @bind-Value="@UsuarioDTO.HorarioPreferencia" class="form-control">
-                        <option value="" selected>-- Selecciona un elemento --</option>
-                        <option value="Mañana">Mañana</option>
-                        <option value="Tarde">Tarde</option>
-                        <option value="Noche">Noche</option>
+            <div class="mb-4">
+                <label class="form-label">Horario de preferencia</label>
+                <InputSelect @bind-Value="@UsuarioDTO.HorarioPreferencia" class="form-control">
+                    <option value="" selected>-- Selecciona un elemento --</option>
+                    <option value="Mañana">Mañana</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noche">Noche</option>
 
-                    </InputSelect>
-                </div>
-                <div class="mb-4">
-                    <InputCheckbox @bind-Value="@UsuarioDTO.Asistencia" class="form-check-input me-2" id="variosExamenes" />
-                    <label class="form-check-label">Necesito asistencia</label>
+                </InputSelect>
+            </div>
+            <div class="mb-4">
+                <InputCheckbox @bind-Value="@UsuarioDTO.Asistencia" class="form-check-input me-2" id="variosExamenes" />
+                <label class="form-check-label">Necesito asistencia</label>
 
-                </div>
+            </div>
 
 
 
-                <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-            </EditForm>
-            @if (!string.IsNullOrEmpty(mensaje))
-            {
+            <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+        </EditForm>
+        @*@if (!string.IsNullOrEmpty(mensaje))
+        {
 
-                <div class="alert alert-success mb-3">
-                    @mensaje
-                </div>
-            }
+            <div class="alert alert-success mb-3">
+                @mensaje
+            </div>
+        }*@
 
-        </div>
     </div>
+</div>
 
 
 
@@ -127,11 +129,11 @@ else
     protected async override Task OnInitializedAsync()
     {
         var perfil = await servicioPerfil.GetPerfilAsync();
-        if(perfil is not null)
+        if (perfil is not null)
         {
             UsuarioDTO = perfil;
         }
-        
+
     }
 
     private async Task OnSubmitPerfilUsuario()
@@ -142,17 +144,19 @@ else
 
             if (resultado != null)
             {
-                mensaje = "Datos guardados correctamente";
-                UsuarioDTO  = new UsuarioDTO();
+                //mensaje = "Datos guardados correctamente";
+                await JS.InvokeVoidAsync("toastrHelper.successAndRedirect",
+                "Datos guardados correctamente", "/inicio");
+                UsuarioDTO = new UsuarioDTO();
             }
             else
             {
-                mensaje = "Hubo un problema al guardar los datos";
+                await JS.InvokeVoidAsync("toastr.error", "Hubo un problema al guardar los datos");
             }
         }
         catch (Exception ex)
         {
-            mensaje = "Ocurrió un error al guardar los datos.";
+            await JS.InvokeVoidAsync("toastr.error", "Ocurrió un error al guardar los datos.");
         }
     }
 

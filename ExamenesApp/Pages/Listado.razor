@@ -1,14 +1,22 @@
-﻿@page "/listado"
+﻿@page "/inicio"
 @attribute [Authorize]
 @using Microsoft.AspNetCore.Authorization
 @using ExamenesApp.Modelos
 @using ExamenesApp.Servicios
 @using ExamenesApp_Modelos.DTOs
+@using System.Globalization;
 @inject InscripcionExamenService servicioInscripcionExamenes
-
+@inject PerfilService servicioPerfil
+@inject IJSRuntime JS
 @if (isLoading)
 {
     <p>Cargando exámenes...</p>
+}
+else if (usuario == null || string.IsNullOrEmpty(usuario.Nombres))
+{
+    <div class="alert alert-warning">
+        No tienes registro de tus datos. <a href="/registro-datos" class="alert-link">Haz clic aquí para registrarlos</a>
+    </div>
 }
 else if (!ExamenesInscripciones.Any())
 {
@@ -20,36 +28,56 @@ else
 {
     <div class="container mt-4">
         <div class="row text-center">
-            <h1 class="mb-4">Listado de exámenes</h1>
+            <div class="mb-5">
+                <h1>Listado de exámenes</h1>
+                <a href="/inscribir-examenes"
+                   class="btn btn-primary btn-lg"
+                   style="position: fixed; right: 20px; top: 100px; z-index: 1050;">
+                    <i class="bi bi-plus-circle"></i>
+                </a>
+            </div>
+            <div class="mb-4">
+                <h3>Exámenes por presentar</h3>
+            </div>
 
-            <h3>Exámenes por presentar</h3>
             @foreach (var examen in ExamenesPorPresentar)
             {
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="grid-card">
-                        <p>@nombreCompleto</p>
-                        <h3>@examen.NombreExamen</h3>
-                        <p>Código: @examen.Codigo</p>
-                        <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
-                        <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
-                        <p>
-                            <button class="btn btn-link p-0" @onclick="() => OnDelete(examen.Id)">Eliminar</button>
-                        </p>
+                <div class="col-12 col-md-4 mb-5">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h3>@examen.NombreExamen</h3>
+                            <p>Código: @examen.Codigo</p>
+                            <p>Estudiante: @ConvertirAMayusculasPalabras(usuario.Nombres) @ConvertirAMayusculasPalabras(usuario.Apellidos)</p>
+                            <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
+                            <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
+                            <p>Modalidad: @usuario.Modalidad</p>
+
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-danger btn-sm" @onclick="() => OnDelete(examen.Id)">
+                                Eliminar
+                            </button>
+                        </div>
                     </div>
                 </div>
             }
+            <div class="mb-4">
+                <h3>Exámenes presentados</h3>
+            </div>
 
-            <h3>Exámenes presentados</h3>
             @foreach (var examen in ExamenesPresentados)
             {
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="grid-card">
-                        <p>@nombreCompleto</p>
-                        <h3>@examen.NombreExamen</h3>
-                        <p>Código: @examen.Codigo</p>
-                        <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
-                        <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
-                        <p><span class="badge bg-success">Presentado</span></p>
+                <div class="col-12 col-md-4 mb-5">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h3>@examen.NombreExamen</h3>
+                            <p>Código: @examen.Codigo</p>
+                            <p>Estudiante: @ConvertirAMayusculasPalabras(usuario.Nombres) @ConvertirAMayusculasPalabras(usuario.Apellidos)</p>
+                            <p>Fecha: @examen.FechaExamen.ToString("dd 'de' MMMM 'de' yyyy")</p>
+                            <p>Hora: @examen.FechaExamen.ToString("HH:mm")</p>
+                            <p>Modalidad: @usuario.Modalidad</p>
+                            <p><span class="badge bg-success">Presentado</span></p>
+                        </div>
                     </div>
                 </div>
             }
@@ -58,8 +86,8 @@ else
 }
 
 @code {
-    private string nombreCompleto;
-    private UsuarioDTO UsuarioDTO { get; set; } = new UsuarioDTO();
+
+    private UsuarioDTO? usuario { get; set; } = new UsuarioDTO();
     private List<InscripcionExamenDTO> ExamenesInscripciones = new();
     private List<InscripcionExamenDTO> ExamenesPorPresentar = new();
     private List<InscripcionExamenDTO> ExamenesPresentados = new();
@@ -78,20 +106,48 @@ else
             .Where(e => e.FechaExamen < DateTime.Today)
             .ToList();
 
-        
+        usuario = await servicioPerfil.GetPerfilAsync();
 
         isLoading = false;
     }
 
+    //private async Task OnDelete(int id)
+    //{
+    //    var eliminado = await servicioInscripcionExamenes.EliminarInscripcion(id);
+    //    if (eliminado)
+    //    {
+    //        ExamenesInscripciones.RemoveAll(x => x.Id == id);
+    //        ExamenesPorPresentar = ExamenesInscripciones
+    //       .Where(e => e.FechaExamen >= DateTime.Today)
+    //       .ToList();
+
+    //        ExamenesPresentados = ExamenesInscripciones
+    //            .Where(e => e.FechaExamen < DateTime.Today)
+    //            .ToList();
+    //        StateHasChanged(); // Actualiza la interfaz
+    //    }
+    //    else
+    //    {
+    //        // Mostrar mensaje de error al usuario
+    //        mensaje = "No se encontró la inscripción a eliminar.";
+    //    }
+    //}
+
+
     private async Task OnDelete(int id)
     {
+        bool confirm = await JS.InvokeAsync<bool>("sweetAlertHelper.confirmDelete", "Esta acción no se puede deshacer");
+
+        if (!confirm)
+            return;
+
         var eliminado = await servicioInscripcionExamenes.EliminarInscripcion(id);
         if (eliminado)
         {
             ExamenesInscripciones.RemoveAll(x => x.Id == id);
             ExamenesPorPresentar = ExamenesInscripciones
-           .Where(e => e.FechaExamen >= DateTime.Today)
-           .ToList();
+               .Where(e => e.FechaExamen >= DateTime.Today)
+               .ToList();
 
             ExamenesPresentados = ExamenesInscripciones
                 .Where(e => e.FechaExamen < DateTime.Today)
@@ -100,9 +156,21 @@ else
         }
         else
         {
-            // Mostrar mensaje de error al usuario
-            mensaje = "No se encontró la inscripción a eliminar.";
+            // Puedes mostrar otro SweetAlert de error
+            await JS.InvokeVoidAsync("Swal.fire", "Error", "No se encontró la inscripción a eliminar.", "error");
         }
+    }
+
+    private string ConvertirAMayusculasPalabras(string texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
+            return texto;
+
+        // Crea un TextInfo para la cultura actual
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+
+        // Convierte a title case
+        return textInfo.ToTitleCase(texto.ToLower());
     }
 
 }

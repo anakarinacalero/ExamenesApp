@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\anaka\\repos\\ExamenesApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65BC5760-5B17-4894-B38E-F2D75431F16F}|ExamenesApp_backend\\ExamenesApp_backend.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp_backend\\servicios\\servicioinscripcionexamen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BC5760-5B17-4894-B38E-F2D75431F16F}|ExamenesApp_backend\\ExamenesApp_backend.csproj|solutionrelative:examenesapp_backend\\servicios\\servicioinscripcionexamen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65BC5760-5B17-4894-B38E-F2D75431F16F}|ExamenesApp_backend\\ExamenesApp_backend.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp_backend\\servicios\\servicioperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BC5760-5B17-4894-B38E-F2D75431F16F}|ExamenesApp_backend\\ExamenesApp_backend.csproj|solutionrelative:examenesapp_backend\\servicios\\servicioperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\registrodatos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\registrodatos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\inicio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\inicio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\listado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\listado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\autenticacion\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\autenticacion\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\registrodatos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\registrodatos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\wwwroot\\js\\sweetalerthelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\wwwroot\\js\\sweetalerthelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\inicio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\inicio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\inscribirexamen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\inscribirexamen.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\wwwroot\\js\\toastrhelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\wwwroot\\js\\toastrhelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|c:\\users\\anaka\\repos\\examenesapp\\examenesapp\\pages\\autenticacion\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1274191-D64E-4458-A41F-DE34DA7028FF}|ExamenesApp\\ExamenesApp.csproj|solutionrelative:examenesapp\\pages\\autenticacion\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,39 +58,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicioInscripcionExamen.cs",
-              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp_backend\\Servicios\\ServicioInscripcionExamen.cs",
-              "RelativeDocumentMoniker": "ExamenesApp_backend\\Servicios\\ServicioInscripcionExamen.cs",
-              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp_backend\\Servicios\\ServicioInscripcionExamen.cs",
-              "RelativeToolTip": "ExamenesApp_backend\\Servicios\\ServicioInscripcionExamen.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAswIYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T00:58:09.13Z",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ExamenesApp\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "ExamenesApp\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T15:04:04.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServicioPerfilUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp_backend\\Servicios\\ServicioPerfilUsuario.cs",
-              "RelativeDocumentMoniker": "ExamenesApp_backend\\Servicios\\ServicioPerfilUsuario.cs",
-              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp_backend\\Servicios\\ServicioPerfilUsuario.cs",
-              "RelativeToolTip": "ExamenesApp_backend\\Servicios\\ServicioPerfilUsuario.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T00:57:55.044Z",
+              "DocumentIndex": 0,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "ExamenesApp\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "ExamenesApp\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-26T15:03:49.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sweetAlertHelper.js",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\js\\sweetAlertHelper.js",
+              "RelativeDocumentMoniker": "ExamenesApp\\wwwroot\\js\\sweetAlertHelper.js",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\js\\sweetAlertHelper.js",
+              "RelativeToolTip": "ExamenesApp\\wwwroot\\js\\sweetAlertHelper.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-26T15:01:00.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "ExamenesApp\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\index.html",
+              "RelativeToolTip": "ExamenesApp\\wwwroot\\index.html",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-26T15:00:12.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "toastrHelper.js",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\js\\toastrHelper.js",
+              "RelativeDocumentMoniker": "ExamenesApp\\wwwroot\\js\\toastrHelper.js",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\wwwroot\\js\\toastrHelper.js",
+              "RelativeToolTip": "ExamenesApp\\wwwroot\\js\\toastrHelper.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-26T14:14:55.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InscribirExamen.razor",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\InscribirExamen.razor",
+              "RelativeDocumentMoniker": "ExamenesApp\\Pages\\InscribirExamen.razor",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\InscribirExamen.razor",
+              "RelativeToolTip": "ExamenesApp\\Pages\\InscribirExamen.razor",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAF0AAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T14:01:53.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegistroDatos.razor",
+              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\RegistroDatos.razor",
+              "RelativeDocumentMoniker": "ExamenesApp\\Pages\\RegistroDatos.razor",
+              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\RegistroDatos.razor",
+              "RelativeToolTip": "ExamenesApp\\Pages\\RegistroDatos.razor",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T00:39:32.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Listado.razor",
               "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\Listado.razor",
               "RelativeDocumentMoniker": "ExamenesApp\\Pages\\Listado.razor",
               "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\Listado.razor",
               "RelativeToolTip": "ExamenesApp\\Pages\\Listado.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAFAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-26T00:45:24.984Z",
               "EditorCaption": ""
@@ -90,58 +163,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "InscribirExamen.razor",
-              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\InscribirExamen.razor",
-              "RelativeDocumentMoniker": "ExamenesApp\\Pages\\InscribirExamen.razor",
-              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\InscribirExamen.razor",
-              "RelativeToolTip": "ExamenesApp\\Pages\\InscribirExamen.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T00:45:19.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "ExamenesApp\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "ExamenesApp\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T00:43:04.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegistroDatos.razor",
-              "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\RegistroDatos.razor",
-              "RelativeDocumentMoniker": "ExamenesApp\\Pages\\RegistroDatos.razor",
-              "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\RegistroDatos.razor",
-              "RelativeToolTip": "ExamenesApp\\Pages\\RegistroDatos.razor",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T00:39:32.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Inicio.razor",
               "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\Inicio.razor",
               "RelativeDocumentMoniker": "ExamenesApp\\Pages\\Inicio.razor",
               "ToolTip": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\Inicio.razor",
               "RelativeToolTip": "ExamenesApp\\Pages\\Inicio.razor",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-26T00:34:44.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\anaka\\repos\\ExamenesApp\\ExamenesApp\\Pages\\Autenticacion\\Login.razor",
               "RelativeDocumentMoniker": "ExamenesApp\\Pages\\Autenticacion\\Login.razor",
