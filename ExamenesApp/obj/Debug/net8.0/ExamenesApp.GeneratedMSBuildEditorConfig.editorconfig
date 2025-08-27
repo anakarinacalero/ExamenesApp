@@ -44,16 +44,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Inicio.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lvLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/InscribirExamen.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpYmlyRXhhbWVuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Listado.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFkby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/Perfil.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyZmlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anaka/repos/ExamenesApp/ExamenesApp/Pages/RegistroDatos.razor]

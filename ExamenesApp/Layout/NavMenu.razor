@@ -1,6 +1,6 @@
 ﻿@inject NavigationManager NavigationManager
 @using Microsoft.AspNetCore.Components.Authorization
-<div class="top-row ps-3 navbar navbar-dark">
+<div class="top-row ps-3 navbar navbar-dark" style="background-color:grey">
     <div class="container-fluid">
         <a class="navbar-brand" href="">ExamenesApp</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -8,7 +8,7 @@
         </button>
     </div>
 </div>
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass nav-scrollable" style="background-color:grey" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <AuthorizeView>
             <NotAuthorized>
@@ -25,8 +25,8 @@
             </NotAuthorized>
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="inicio">
-                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>Inicio
+                    <NavLink class="nav-link" href="listado-examenes">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>Listado de exámenes
                     </NavLink>
 
                 </div>
@@ -43,8 +43,8 @@
 
                 </div>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="listado">
-                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>Listado de exámenes
+                    <NavLink class="nav-link" href="perfil">
+                        <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span>Perfil
                     </NavLink>
 
                 </div>
@@ -76,7 +76,7 @@
         ((CustomAuthenticationStateProvider)AuthStateProvider).NotifyUserLogout();
 
         // Redirigir a la página de login o home
-        NavigationManager.NavigateTo("/login");
+        NavigationManager.NavigateTo("/");
     }
 
     private void ToggleNavMenu()

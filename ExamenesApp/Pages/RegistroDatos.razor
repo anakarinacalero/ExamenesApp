@@ -7,12 +7,8 @@
 @inject PerfilService servicioPerfil
 @inject IJSRuntime JS
 
-<PageTitle>Inscripcion</PageTitle>
+<PageTitle>Inscripción</PageTitle>
 
-@*@if (isLoading)
-    {<p>Cargando exámenes...</p>}
-    else
-    {*@
 
 <div class="text-center">
     <h1 class="display-4">Registra tus datos</h1>
@@ -107,13 +103,7 @@
 
             <button type="submit" class="btn btn-primary mb-2">Guardar</button>
         </EditForm>
-        @*@if (!string.IsNullOrEmpty(mensaje))
-        {
-
-            <div class="alert alert-success mb-3">
-                @mensaje
-            </div>
-        }*@
+       
 
     </div>
 </div>
@@ -124,7 +114,6 @@
 @code {
     private UsuarioDTO UsuarioDTO { get; set; } = new UsuarioDTO();
     private string mensaje = string.Empty;
-    private string nombre;
     private bool isLoading = true;
     protected async override Task OnInitializedAsync()
     {
@@ -146,7 +135,7 @@
             {
                 //mensaje = "Datos guardados correctamente";
                 await JS.InvokeVoidAsync("toastrHelper.successAndRedirect",
-                "Datos guardados correctamente", "/inicio");
+                "Datos guardados correctamente", "/perfil");
                 UsuarioDTO = new UsuarioDTO();
             }
             else

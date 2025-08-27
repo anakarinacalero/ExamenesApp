@@ -5,7 +5,7 @@
 @inject AutenticacionService authService
 @inject ExamenesApp.Servicios.PerfilService perfilService
 <PageTitle>Login</PageTitle>
-<h3>Login</h3>
+<h1>Login</h1>
 <div class="card">
     <div class="card-body">
         @if (!string.IsNullOrEmpty(mensaje))
@@ -28,7 +28,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Login</button>
-            <a href="registro" class="btn btn-success">Registrate</a>
+            <a href="registro" class="btn btn-link">Registrate</a>
         </EditForm>
 
     </div>
@@ -58,7 +58,7 @@
 
         if (datos != null && !string.IsNullOrEmpty(datos.Nombres))
         {
-            NavigationManager.NavigateTo("/inicio");
+            NavigationManager.NavigateTo("/listado-examenes");
         }
         else
         {

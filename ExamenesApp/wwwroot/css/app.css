@@ -101,6 +101,7 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
-.nav-scrollable .nav-link {
-    color: gray;
+.nav-scrollable  {
+    
+    background-color: grey; important!
 }

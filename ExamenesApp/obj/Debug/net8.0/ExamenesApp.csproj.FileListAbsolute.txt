@@ -1053,6 +1053,6 @@ C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\utloefp
 C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\wh40i7c3sy-bmpn98p6dm.gz
 C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\mjvjksvjre-t7dhkbdz06.gz
 C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\ExamenesApp.sourcelink.json
-C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\yyki0x8jjv-tw4gpb2ct2.gz
-C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\lfaydrxqfq-uqccj3mcut.gz
-C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\9iclwm835g-zdsszx382s.gz
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\yyki0x8jjv-lvarrhksys.gz
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\lfaydrxqfq-ndnrxfx2v2.gz
+C:\Users\anaka\repos\ExamenesApp\ExamenesApp\obj\Debug\net8.0\compressed\9iclwm835g-rqld3cwh6f.gz

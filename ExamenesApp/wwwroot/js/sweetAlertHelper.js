@@ -1,7 +1,7 @@
 ﻿window.sweetAlertHelper = {
     confirmDelete: function (mensaje) {
         return Swal.fire({
-            title: '¿Estás segura?',
+            title: '¿Estás seguro?',
             text: mensaje,
             icon: 'warning',
             showCancelButton: true,

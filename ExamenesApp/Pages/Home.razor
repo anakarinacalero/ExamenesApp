@@ -1,13 +1,48 @@
 ﻿@page "/"
-
 @using ExamenesApp_Modelos.DTOs
 @using ExamenesApp.Servicios
+@using Microsoft.AspNetCore.Components.Authorization
+<PageTitle>Inicio</PageTitle>
 
+<div class="container mt-5 text-center">
+    <h1 class="display-4">Bienvenido a ExámenesApp</h1>
+    <p class="lead mb-10">Gestiona tus exámenes, inscripciones y datos de forma sencilla.</p>
 
-<PageTitle>Home</PageTitle>
+    <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">📘 Exámenes</h5>
+                    <p class="card-text">Gestiona tus exámenes pedidos</p>
+                    <AuthorizeView>
+                        <a class="btn btn-primary w-100" href="/listado-examenes">Ir a Exámenes</a>
+                    </AuthorizeView>
+                </div>
+            </div>
+        </div>
 
-<h1>Hello, world!</h1>
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">📝 Inscripciones</h5>
+                    <p class="card-text">Inscribete al exámen de tu preferencia</p>
+                    <AuthorizeView>
+                        <a class="btn btn-success w-100" href="/inscribir-examenes">Ir a Inscripciones</a>
+                    </AuthorizeView>
+                </div>
+            </div>
+        </div>
 
-Welcome to your new app.
-
-
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">👤 Perfil</h5>
+                    <p class="card-text">Administra tu información personal</p>
+                    <AuthorizeView>
+                        <a class="btn btn-secondary w-100" href="/perfil">Ir a tu perfil</a>
+                     </AuthorizeView>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-﻿@page "/inicio"
+﻿@page "/listado-examenes"
 @attribute [Authorize]
 @using Microsoft.AspNetCore.Authorization
 @using ExamenesApp.Modelos
@@ -111,28 +111,7 @@ else
         isLoading = false;
     }
 
-    //private async Task OnDelete(int id)
-    //{
-    //    var eliminado = await servicioInscripcionExamenes.EliminarInscripcion(id);
-    //    if (eliminado)
-    //    {
-    //        ExamenesInscripciones.RemoveAll(x => x.Id == id);
-    //        ExamenesPorPresentar = ExamenesInscripciones
-    //       .Where(e => e.FechaExamen >= DateTime.Today)
-    //       .ToList();
-
-    //        ExamenesPresentados = ExamenesInscripciones
-    //            .Where(e => e.FechaExamen < DateTime.Today)
-    //            .ToList();
-    //        StateHasChanged(); // Actualiza la interfaz
-    //    }
-    //    else
-    //    {
-    //        // Mostrar mensaje de error al usuario
-    //        mensaje = "No se encontró la inscripción a eliminar.";
-    //    }
-    //}
-
+  
 
     private async Task OnDelete(int id)
     {
@@ -166,10 +145,10 @@ else
         if (string.IsNullOrWhiteSpace(texto))
             return texto;
 
-        // Crea un TextInfo para la cultura actual
+        
         TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
-        // Convierte a title case
+       
         return textInfo.ToTitleCase(texto.ToLower());
     }
 
